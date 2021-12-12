@@ -3,14 +3,16 @@ import App from "./App";
 // import VueRouter from "vue-router";
 import { createRouter, createWebHistory } from "vue-router";
 
+import Home from "./components/Home.vue";
 import HelloVueApp from "./components/HelloVueApp.vue";
+import HelloReactApp from "./components/HelloReactApp.vue";
 
-const routes = [{ path: "/vue", component: HelloVueApp, name:"vueApp" }];
+const routes = [
+  { path: "/", component: Home, name: "home" },
+  { path: "/vue", component: HelloVueApp, name: "vueApp" },
+  { path: "/react", component: HelloReactApp, name: "reactApp" },
+];
 
-// const router = new VueRouter({
-//   mode: "history",
-//   routes, // short for `routes: routes`
-// });
 
 const router = createRouter({
   // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
@@ -19,8 +21,6 @@ const router = createRouter({
 });
 
 const mount = (el) => {
-    console.log("el",el)
-    console.log("router", router);
   const app = createApp(App);
   app.use(router);
   app.mount(el);

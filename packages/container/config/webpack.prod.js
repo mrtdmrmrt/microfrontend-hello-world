@@ -16,6 +16,7 @@ const prodConfig = {
       name: "container",
       remotes: {
         helloVue: `helloVue@${domain}/helloVue/latest/remoteEntry.js`,
+        helloReact: `helloReact@${domain}/helloReact/latest/remoteEntry.js`
       },
       shared: packageJson.dependencies,
     }),

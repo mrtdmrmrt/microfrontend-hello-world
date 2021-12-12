@@ -4,7 +4,7 @@
 
 <script>
 import { ref, onMounted } from "vue";
-import { mount } from "helloVue/HelloVueApp";
+import { mount } from "helloReact/HelloReactApp";
 
 export default {
   setup() {
